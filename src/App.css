@@ -1,0 +1,76 @@
+.App {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  background-color: #f4f4f9;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.game-container {
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.8rem;
+  color: #444;
+}
+
+.board {
+  width: 320px;
+  height: 320px;
+  background: #ffffff;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  margin: 2rem auto;
+  user-select: none;
+  cursor: pointer;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  padding: 10px;
+}
+
+.board_tile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #ccc;
+  font-size: 3rem;
+  font-weight: bold;
+  font-family: "Courier New", Courier, monospace;
+  color: #333;
+  background: #fff;
+  transition: all 0.2s ease-in-out;
+  border-radius: 8px;
+}
+
+.board_tile:hover {
+  background-color: #f0f0f0;
+}
+
+.board_tile.filled {
+  cursor: not-allowed;
+}
+
+.board_tile.disabled {
+  pointer-events: none;
+}
+
+.reset-button {
+  background: #ff5757;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 20px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+.reset-button:hover {
+  background: #e04444;
+}
